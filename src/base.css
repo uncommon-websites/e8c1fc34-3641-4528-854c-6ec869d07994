@@ -1,0 +1,292 @@
+/* Do not modify this file, as it is generated. */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+@theme {
+	--font-fallback:
+		"Inter Variable", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		"Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+	--color-white: #fff;
+	--color-black: #000;
+	--color-transparent: transparent;
+	--color-current: currentColor;
+}
+
+@theme inline {
+	/* Emphasis */
+	--color-emphasis-dim: var(--color-muted-foreground);
+	--color-emphasis-low: color-mix(in oklch, var(--color-foreground), var(--color-background) 30%);
+	--color-emphasis-medium: color-mix(
+		in oklch,
+		var(--color-foreground),
+		var(--color-background) 15%
+	);
+	--color-emphasis-high: var(--color-foreground);
+
+	/* Background colors */
+	--color-bg-primary: var(--color-background);
+}
+
+:where([data-theme="dark"], [data-theme="dark"] *) {
+	:root {
+		--color-emphasis-dim: var(--color-muted-foreground);
+		--color-emphasis-low: color-mix(in oklch, var(--color-foreground), var(--color-background) 30%);
+		--color-emphasis-medium: color-mix(
+			in oklch,
+			var(--color-foreground),
+			var(--color-background) 15%
+		);
+		--color-emphasis-high: var(--color-foreground);
+
+		/* Background colors for dark mode */
+		--color-bg-primary: var(--color-background);
+		--color-bg-secondary: var(--color-card);
+		--color-bg-tertiary: var(--color-muted);
+		--color-bg-accent: var(--color-accent);
+		--color-bg-hover: var(--color-card-hover);
+		--color-bg-active: var(--color-accent);
+	}
+}
+
+@custom-variant touch (&:where(.touch-enabled, .touch-enabled *));
+
+@layer utilities {
+	/* Responsive spacing */
+	.p {
+		@apply p-4 sm:p-5 md:p-8 lg:p-10;
+	}
+
+	.px {
+		@apply px-4 sm:px-5 md:px-8 lg:px-10;
+	}
+
+	.py {
+		@apply py-4 sm:py-5 md:py-8 lg:py-10;
+	}
+
+	.pt {
+		@apply pt-4 sm:pt-5 md:pt-8 lg:pt-10;
+	}
+
+	.pb {
+		@apply pb-4 sm:pb-5 md:pb-8 lg:pb-10;
+	}
+
+	.pl {
+		@apply pl-4 sm:pl-5 md:pl-8 lg:pl-10;
+	}
+
+	.pr {
+		@apply pr-4 sm:pr-5 md:pr-8 lg:pr-10;
+	}
+
+	.m {
+		@apply m-4 sm:m-5 md:m-8 lg:m-10;
+	}
+
+	.mx {
+		@apply mx-4 sm:mx-5 md:mx-8 lg:mx-10;
+	}
+
+	.my {
+		@apply my-4 sm:my-5 md:my-8 lg:my-10;
+	}
+
+	.mt {
+		@apply mt-4 sm:mt-5 md:mt-8 lg:mt-10;
+	}
+
+	.mb {
+		@apply mb-4 sm:mb-5 md:mb-8 lg:mb-10;
+	}
+
+	.ml {
+		@apply ml-4 sm:ml-5 md:ml-8 lg:ml-10;
+	}
+
+	.mr {
+		@apply mr-4 sm:mr-5 md:mr-8 lg:mr-10;
+	}
+
+	.grid-center {
+		@apply col-span-1 col-end-1 row-span-1 row-end-1;
+	}
+
+	.debug {
+		@apply ring-1 ring-red-500 ring-inset;
+		.debug {
+			@apply ring-1 ring-blue-500 ring-inset;
+			.debug {
+				@apply ring-1 ring-green-500 ring-inset;
+				.debug {
+					@apply ring-1 ring-yellow-500 ring-inset;
+					.debug {
+						@apply ring-1 ring-purple-500 ring-inset;
+					}
+				}
+			}
+		}
+	}
+}
+
+@layer components {
+	[data-button-root] {
+		@apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 font-medium transition-colors disabled:pointer-events-none disabled:opacity-50;
+		color: var(--color-foreground);
+		border-radius: var(--radius);
+
+		&:focus-visible {
+			outline: 1px solid var(--color-ring);
+			outline-offset: 2px;
+		}
+
+		&[data-variant="primary"] {
+			background-color: var(--color-primary);
+			color: var(--color-primary-foreground);
+
+			&:hover {
+				background-color: var(--color-primary);
+				filter: brightness(0.9);
+			}
+
+			&:active {
+				background-color: var(--color-primary);
+				filter: brightness(0.8);
+			}
+		}
+
+		&[data-variant="secondary"] {
+			background-color: color-mix(in oklch, var(--color-card), var(--color-black) 2%);
+			color: var(--color-foreground);
+			border: 1px solid color-mix(in oklch, var(--color-white), transparent 85%);
+
+			&:hover {
+				background-color: var(--color-card-hover);
+			}
+
+			&:active {
+				background-color: var(--color-card-hover);
+				filter: brightness(0.95);
+			}
+		}
+
+		&[data-variant="outline"] {
+			border: 1px solid var(--color-border);
+			background-color: var(--color-background);
+			color: var(--color-foreground);
+
+			&:hover {
+				background-color: var(--color-accent);
+			}
+
+			&:active {
+				background-color: var(--color-accent);
+				filter: brightness(0.95);
+			}
+		}
+
+		&[data-variant="ghost"] {
+			background-color: transparent;
+			color: var(--color-foreground);
+
+			&:hover {
+				background-color: var(--color-accent);
+			}
+
+			&:active {
+				background-color: var(--color-accent);
+				filter: brightness(0.95);
+			}
+		}
+
+		&[data-variant="link"] {
+			background-color: transparent;
+			color: var(--color-primary);
+			padding: 0;
+			text-decoration: underline;
+			text-underline-offset: 4px;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		&[data-size="sm"] {
+			border-radius: var(--radius-sm);
+			padding: 0.375rem 0.75rem;
+			font-size: 0.75rem;
+		}
+
+		&[data-size="lg"] {
+			border-radius: var(--radius-lg);
+			padding: 0.625rem 1.25rem;
+			font-size: 1rem;
+		}
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	.no-scrollbar {
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+	}
+
+	.linear-blur-up {
+		@apply backdrop-blur-sm;
+		mask-image: linear-gradient(180deg, #000, rgba(0, 0, 0, 0));
+		-webkit-mask-image: linear-gradient(180deg, #000, rgba(0, 0, 0, 0));
+	}
+
+	.linear-blur-down {
+		@apply backdrop-blur-sm;
+		mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #000);
+		-webkit-mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0), #000);
+	}
+
+	img {
+		@apply rounded-xs;
+	}
+
+	[generating] {
+		@apply pointer-events-none relative select-none;
+
+		&,
+		& * {
+			color: transparent !important;
+		}
+
+		img,
+		video {
+			display: none !important;
+		}
+		&::before {
+			content: "";
+			@apply absolute inset-0 z-40 flex items-center justify-center blur;
+			border: 1px solid var(--color-border);
+			background-color: var(--color-muted);
+			color: var(--color-muted-foreground) !important;
+
+			filter: brightness(100%) saturate(0%) blur(16px);
+		}
+		&::after {
+			content: "Generating...";
+			@apply absolute inset-0 z-50 flex animate-pulse items-center justify-center;
+			color: var(--color-muted-foreground) !important;
+		}
+	}
+
+	@keyframes light-pulse {
+		0%,
+		100% {
+			opacity: 0.5;
+			filter: brightness(90%) saturate(0%) blur(30px);
+		}
+
+		50% {
+			opacity: 0.5;
+			filter: brightness(70%) saturate(0%) blur(30px);
+		}
+	}
+}
