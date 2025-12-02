@@ -2,7 +2,6 @@
 import tailwindcss from "@tailwindcss/vite";
 import { sveltekit } from "@sveltejs/kit/vite";
 import { defineConfig, loadEnv } from "vite";
-import Icons from "unplugin-icons/vite";
 import ComponentTagger from "vite-plugin-component-tagger";
 
 export default defineConfig(({ mode }) => {
@@ -12,10 +11,7 @@ export default defineConfig(({ mode }) => {
 		plugins: [
 			tailwindcss(),
 			sveltekit(),
-			ComponentTagger(),
-			Icons({
-				compiler: "svelte"
-			})
+			ComponentTagger()
 		],
 		server: {
 			allowedHosts: [".unc.mn", "localhost"],

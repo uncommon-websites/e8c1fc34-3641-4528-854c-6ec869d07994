@@ -11,7 +11,3 @@ declare global {
 }
 
 export {};
-// Allow unplugin-icons imports
-declare module "~icons/*";
-
-import "unplugin-icons/types/svelte";

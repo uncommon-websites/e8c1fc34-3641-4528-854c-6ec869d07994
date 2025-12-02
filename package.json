@@ -17,7 +17,6 @@
 		"@eslint/compat": "^1.2.8",
 		"@eslint/js": "^9.24.0",
 		"@floating-ui/dom": "^1.6.13",
-		"@iconify-json/lucide": "^1.2.35",
 		"@number-flow/svelte": "^0.3.7",
 		"@sveltejs/adapter-auto": "^4.0.0",
 		"@sveltejs/kit": "^2.20.5",
@@ -28,6 +27,7 @@
 		"eslint-config-prettier": "^10.1.2",
 		"eslint-plugin-svelte": "^2.46.1",
 		"globals": "^15.15.0",
+		"lucide-svelte": "^0.474.0",
 		"motion": "^12.6.3",
 		"prettier": "^3.5.3",
 		"prettier-plugin-svelte": "^3.3.3",
@@ -38,7 +38,6 @@
 		"tailwindcss": "^4.1.3",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.29.1",
-		"unplugin-icons": "^22.1.0",
 		"vite": "^6.2.6",
 		"vite-plugin-component-tagger": "^0.2.6"
 	}
