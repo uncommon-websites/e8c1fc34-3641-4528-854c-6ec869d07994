@@ -1,10 +1,4 @@
-/* Do not modify this file, as it is generated. */
-
 @import "tailwindcss";
-@import "./base.css";
-@import "./typography.css";
-@import "./spacing.css";
-@import "./theme.css";
 
 @theme {
 	/* Colors */
