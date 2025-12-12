@@ -9,15 +9,15 @@
     <Navbar transparent={true} />
     
     <div class="text-center z-10 px-4 max-w-4xl mx-auto mt-10">
-        <div class="mb-6 text-white/80 text-sm font-medium tracking-wide">Now in early access.</div>
+        <div class="mb-6 text-white/80 text-sm font-medium tracking-wide">Now available for executives.</div>
         <h1 class="text-5xl md:text-7xl font-medium text-white tracking-tight mb-8 leading-[1.1]">
-            The email experience<br />
-            you've been waiting for.
+            Your AI workflow manager.<br />
+            Always one step ahead.
         </h1>
         
         <div class="flex items-center justify-center gap-6 mb-20">
             <a href="#get-started" class="bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors">Get started</a>
-            <span class="text-white/70 text-sm font-medium">Fast, beautiful, simple.</span>
+            <span class="text-white/70 text-sm font-medium">Proactive. Intelligent. Anticipatory.</span>
         </div>
     </div>
 
